@@ -1,0 +1,105 @@
+{
+  "name": "KSG Kundan Stone Glass - Global",
+  "asin": "<ASIN>",
+  "apply_to": "parent",
+  "image_dir": "aplus/out/KSG-global",
+  "modules": [
+    {
+      "type": "Standard Image Header With Text",
+      "images": [
+        {
+          "file": "01-hero-970x600.jpg",
+          "alt": "Set of 4 emerald green kundan glass bangles on cream silk with rose petals and a brass bowl"
+        }
+      ],
+      "headlines": [
+        null,
+        "Kundan Stone Glass Bangles, Set of 4"
+      ],
+      "bodies": [
+        "Faceted glass bangles set with round kundan stones in thin gold-coloured rings, made for weddings and festive dressing. Each set has 4 bangles and comes in sizes 2.4, 2.6 and 2.8. Choose from 13 colours."
+      ]
+    },
+    {
+      "type": "Standard Four Image & Text",
+      "images": [
+        {
+          "file": "02-four-image-1-diya.jpg",
+          "alt": "Hand with mehendi wearing a set of magenta kundan glass bangles holding a lit diya"
+        },
+        {
+          "file": "02-four-image-2-tray.jpg",
+          "alt": "Sky aqua kundan glass bangles stacked on a maroon velvet jewellery tray"
+        },
+        {
+          "file": "02-four-image-3-lehenga.jpg",
+          "alt": "Bride's wrist wearing orchid pink kundan glass bangles with a pastel lehenga sleeve"
+        },
+        {
+          "file": "02-four-image-4-haldi.jpg",
+          "alt": "Lemon yellow kundan glass bangles on a brass thali with marigold petals"
+        }
+      ],
+      "headlines": [
+        "Dressed for every occasion",
+        "Diwali evenings",
+        "Jewellery box ready",
+        "Wedding mornings",
+        "Haldi days"
+      ],
+      "bodies": [
+        "Lights, diyas and a full set on your wrist.",
+        "Four bangles that stack into one bright set.",
+        "Soft colours for the bride and her family.",
+        "Bright shades for marigold-and-turmeric mornings."
+      ]
+    },
+    {
+      "type": "Standard Image Header With Text",
+      "images": [
+        {
+          "file": "03-colour-wall-970x600.jpg",
+          "alt": "All 13 colours of Kundan Stone Glass Bangles in one grid with colour names"
+        }
+      ],
+      "headlines": [
+        null,
+        "13 colours, one design"
+      ],
+      "bodies": [
+        "Sky Aqua, Mint Green, Parrot Green, Lime Green, Emerald Green, Lemon Yellow, Coral Peach, Rust Orange, Ruby Red, Maroon, Magenta, Orchid Pink and Plum Wine. Pick the colour on this page to match your outfit."
+      ]
+    },
+    {
+      "type": "Standard Image Header With Text",
+      "images": [
+        {
+          "file": "04-size-guide-970x600.jpg",
+          "alt": "Bangle size guide: 2.4, 2.6 and 2.8 inches with inner diameter in centimetres and how to choose"
+        }
+      ],
+      "headlines": [
+        null,
+        "Choose your size"
+      ],
+      "bodies": [
+        "Each set of 4 comes in sizes 2.4, 2.6 and 2.8 (inner diameter in inches). Bring your thumb and little finger together and pick the size that just slides over the widest part of your hand. Between two sizes, choose the larger one."
+      ]
+    },
+    {
+      "type": "Standard Image & Dark Text Overlay",
+      "images": [
+        {
+          "file": "05-range-970x300.jpg",
+          "alt": "The Bangle Bliss range: Kundan Stone Glass, Multi Stone Glass and Gold Vine Kundan Glass bangles"
+        }
+      ],
+      "headlines": [
+        null
+      ],
+      "bodies": [
+        null
+      ]
+    }
+  ]
+}

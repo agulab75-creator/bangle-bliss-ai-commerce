@@ -1,0 +1,184 @@
+FLIPKART QC FAILURES - WHAT WENT WRONG AND WHAT FIXES IT
+Bangle Bliss, bangle_bracelet_armlet category. Written 17 Oct 2026.
+
+1. THE REAL REASON EVERY UPDATE FAILED (16 Oct, 121 rows)
+   Every failed row had the same two errors, and nothing else:
+     - "[Main/Other Image URL n]: The image URL provided by you is incomplete/invalid.
+        Please provide a valid URL. Please use image uploader to avoid image access errors"
+     - "Insufficient images count"   (a knock-on effect: once Flipkart threw away the links it
+        could not download, too few images were left in the row)
+   Titles, keywords, key features, colours and prices were NEVER the problem.
+
+   Cause: the image links pointed at Shopify's CDN (cdn.shopify.com/...). Those links open fine in a
+   browser, but Flipkart's image downloader fetches thousands of files in a burst and Shopify's
+   CDN does not reliably serve them to it. The failures were random: the same kind of photo
+   passed in one row and failed in the next. The one size-chart link was repeated in every row
+   and failed 92 out of 100 times. Image format, size and colour mode were checked and are fine
+   (JPEG, RGB, 1024-1500 px).
+
+   Proof from our own history:
+     - 13 Oct, new listings with Google Drive direct links      -> QC PASSED 33/33
+     - 13 Oct, new listings with Flipkart-hosted images         -> QC PASSED 45/45
+     - 16 Oct, updates with cdn.shopify.com links               -> QC FAILED 111/121 (image errors only)
+
+2. WHERE IMAGES MUST BE HOSTED FOR FLIPKART
+   Best:   Flipkart's own image uploader. Links look like
+           https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/...
+           Seller Hub > Listings > Add New Listing > Add Bulk Listings > Bangles > Bangle Bliss >
+           Auto-filled Excel Template > Upload Images. Uploading a folder named
+           <SKU>/1.jpg..5.jpg creates one row per SKU in a single step (no clicking per image);
+           then "Generate Catalog File" > "Download template" gives every SKU's Flipkart links.
+           Script: My Bangle Bliss/flipkart_bulk_images.py
+   OK:     Google Drive DIRECT links: https://drive.google.com/uc?export=view&id=<FILE_ID>
+           with sharing set to "Anyone with the link". A normal Drive "share" link (a web page)
+           or a private file gives "restricted access".
+   Never:  cdn.shopify.com, or any other website link.
+
+3. OTHER FLIPKART RULES THAT CAN FAIL QC (from the template's own "Image GuideLines" sheet)
+   - The MAIN (first) image should be on a WHITE background, solo product, no props, no text.
+     A lifestyle/hand shot as the main image risks rejection. Lifestyle, close-up, colour collage
+     and size chart are fine as images 2-5 (text is only banned on the main image).
+   - JPEG only, RGB only (no CMYK, no PNG/WebP). Use at least 1000 x 1000 px.
+   - Max 5 images. Product should fill most of the frame; no stretching; no blur.
+
+4. HOW THE UPDATE FILE MUST BE HANDLED
+   - Download the catalog file from Seller Hub > Listings > filter Category = Bangle Bracelet
+     Armlet > select all > Downloads > Download Catalog File (the option is greyed out until the
+     category filter is applied).
+   - Keep the file name EXACTLY as Flipkart named it (E_bangle-bracelet-armlet_..._BLK....xls).
+     A renamed file gives "Feed upload failed".
+   - Upload: Listings > Uploads > Upload Catalog File.
+   - Rows you did not change come back as "QC Failed: Data provided in edit request is same as
+     existing data". That is harmless - nothing needed changing.
+   - Do not upload a second edit file while one is still in QC.
+
+5. HOW TO READ THE REAL FAILURE REASON
+   Listings > Listing Creation > Bulk Listings > Edited > View > View QC Status > Correct Errors >
+   Request, wait 10 s, then "Last Requested File". The downloaded .xls has the reason for each
+   SKU in the "QC Failed Reason" column. The on-screen page often shows nothing useful.
+
+6. RESULT OF THE FIX (17 Oct)
+   All 190 images (38 colours x 5) were uploaded through Flipkart's uploader, the Flipkart links
+   were written into the catalog file for all 114 colour/size SKUs, and the file was uploaded
+   (request <request-id>). See the update at the bottom of this file for the QC outcome.
+
+UPDATE 17 Oct, about 1 hour after upload (request <request-id>)
+   - 0 image-link errors. On 16 Oct the same 111 rows failed the image-link check in the first pass;
+     this time they passed it and are waiting in Flipkart's content QC (111 "QC in progress").
+   - The only 10 "failed" rows are the ones we deliberately did not change
+     ("same as existing data"): 001, Print-bom, moti-kada, open-ghunghroo, 3-stone/gh-2.8-1,
+     ghunghru 250, ghunghru-250-2.8, GVK-CRM-24/26/28. Harmless.
+   - Remaining risk: this upload uses the LIFESTYLE photo as the main image, while Flipkart's
+     guideline asks for a white-background main image. If content QC rejects rows for that, re-run
+     with the white-studio photo as main (backup data already prepared:
+     My Bangle Bliss/flipkart from claude/flipkart-update-data-white-main.xlsx, use
+     python fk_fill_by_sku.py <fresh E_ file> <out> "flipkart from claude/flipkart-update-data-white-main.xlsx").
+
+UPDATE 18 Oct - FINAL QC RESULT OF <request-id> AND THE SECOND ROOT CAUSE
+   Result: 121 submitted, 52 PASSED, 69 failed (10 of those = unchanged rows, harmless).
+   The image-link problem was gone. The 59 real failures were CONTENT checks that Flipkart could
+   only do once it could actually load the images:
+   a) "Pack of" does not match the number of items shown in the image  (most rows)
+      Cause: image 4 was the "colours available" collage showing 11-14 sets (44-56 bangles)
+      while Pack of = 4. The reviewer counts every bangle in every image.
+      RULE: every product image must show exactly ONE set of 4. No collages, no "colours
+      available" boards, no multi-set flat-lays.
+   b) "Size chart images should not be provided as product image"  (9 KMS rows)
+      RULE: never put the size chart in the image slots on Flipkart.
+   c) Color mismatch (6 rows): GVK Forest Green listed as Color=Brown, Crystal Clear as
+      Color=White (reviewer wants Multicolor).
+      Cause: "Color" is a variant attribute and must be unique per variant group + size.
+      GVK has 6 green/blue shades but Flipkart's list only has Lime, Turquoise, Green, Blue,
+      so two shades get a wrong word. Real fix: split GVK into two variant groups (owner decision).
+   - The LIFESTYLE photo as main image was ACCEPTED (52 rows passed with it), so the
+     white-background worry did not materialise for this category.
+
+   Second upload (18 Oct, request <request-id>), all done with Playwright, no Claude-in-Chrome:
+   - Images hosted on Google Drive (public folder "BB Flipkart v6 final", direct uc?export=view
+     links), uploaded by fk_drive_v6.py / fk_drive_4w.py attached to the banglebliss Chrome
+     (started with --remote-debugging-port=9223 --user-data-dir=".shopify_chrome_profile").
+   - Each listing gets 4 photos: lifestyle (main), close-up, white studio, worn-on-hand.
+     Collage and size chart removed (slot 5 left empty).
+   - fk_catalog_update.py: downloads the catalog file, fills it, uploads it.
+     fk_qc_status.py <ID> shows the counts; fk_qc_errors.py <ID> downloads and summarises the reasons.
+   - Outcome: waiting on Flipkart QC (last time it took overnight).
+
+   Playwright-on-real-Chrome notes:
+   - Google blocks sign-in inside a Playwright-launched browser, so attach to a normal Chrome
+     started with a debugging port and its own profile. The everyday Chrome profile (Chrome 155)
+     refuses debugging connections ("403 Connection rejected").
+   - Chrome freezes background tabs and Playwright then hangs when attaching. The scripts wake
+     every tab first (cdp_wake.py), which makes the window flick through tabs for a few seconds.
+     Do not use that window while a script runs.
+   - Google Drive only shows ~100 rows of a big folder. To get file IDs, use Drive search
+     scoped to the folder (q=<text> parent:<folderId>), not scrolling.
+
+UPDATE 18 Oct evening - QC RESULT OF <request-id> (Drive images, collage removed)
+   121 submitted, 53 passed, 68 failed (10 = unchanged rows). Drive links: no access errors.
+   New lessons:
+   - A BLANK image cell in an edit file does NOT remove the live image. KMS rows still failed
+     "size chart as product image" in Other Image URL 4 although we sent it empty - Flipkart kept
+     the live size chart. To replace an image you must send a different image in that slot.
+   - Colour is now judged strictly: 18 rows told to change Color to "Multicolor" (multi-stone
+     KMS, and several KSG with gold/stone detail), Apple Green told to use "Green", Forest Green
+     (Brown) rejected again. Colour words must describe what the photo shows, and Color must
+     also be unique inside a variant group - these two rules conflict for GVK/KMS/KSG.
+   - "Pack of"/"Items Included" complaints continue on some rows (e.g. GVK-RBL, KMS-TRQ,
+     KSG-AQU) even with single-set photos; likely because the live slot 5 (size chart) or crops
+     that show partial bangles are counted.
+
+UPDATE 18 Oct night - QUICK FIX (request <request-id>): ALL 121 REJECTED IN UNDER AN HOUR
+   Reason on all 111 of our rows: "[Other Image URL 2] / [Other Image URL 4]: Duplicate images
+   found, Please remove the duplicate images and try again".
+   RULE: Flipkart auto-rejects a row that uses the same photo twice. A rejected row changes
+   nothing, so the two colour fixes in this file were not applied either.
+   => Slot 5 needs a genuinely different photo per colour (or slot 5 must be filled with
+      another real shot); blank keeps the old size chart, a duplicate is rejected.
+
+UPDATE 18 Oct 22:53 - COLOUR CANNOT BE EDITED (request <request-id>, colour-only test)
+   All 27 colour changes rejected: "Edits in the ID attributes for a product are not allowed".
+   Color is an ID attribute: fixed forever once the listing exists. The reviewer's colour complaints
+   (GVK Crystal Clear, Moss, Forest; KMS Apple Green, Dusty Pink, Royal Purple; KSG Coral, Rust,
+   Emerald) can only be fixed by creating NEW listings with the right colour (new SKUs, own Group ID)
+   and deactivating the old ones. Variant groups also cannot be split with the grouping file.
+
+UPDATE 19 Oct 03:15 - <request-id> (5 single-set photos, lifestyle main): 1 of 78 passed
+   Flipkart now runs an AUTOMATED image reviewer that compares every photo with the attributes
+   (its messages quote "Image 1: Shade mismatch ..."). Findings:
+   - "Pack of" fails on the MAIN image when it is the lifestyle shot: 4 bangles standing upright in a
+     tight row read as one band, so it cannot count 4. FIX: main image = flat-lay with 4 separate
+     rings on a plain background (generated 38 of them, round 10).
+   - "Assorted products must have images that accurately reflect the exact quantity and color":
+     same root cause (count/colour not readable).
+   - Colour flags spread: Lime/Sea/Moss/Mint told to use Green, Rust told Orange. Color is not
+     editable, so those rows need NEW listings.
+   Next upload <request-id> (19 Oct 03:17): flat-lay main for all 38 colours.
+
+UPDATE 19 Oct 06:30 - WHY EDITS NOW FAIL, AND WHAT IS LEFT
+   Tests run 19 Oct (all via Comet, no Chrome):
+   - <request-id>: flat-lay as MAIN image (4 separate rings, plain background) for all 38 colours:
+     0 of 111 passed. 95 rows: "[Main Image URL] ... 'Pack of' must reflect the number of items shown".
+   - Same request, 9 rows with Type changed "Bangle Set" -> "Bangle": still rejected (same reason).
+   - <request-id>: Pack of 4 -> 1: "Edits in the ID attributes for a product are not allowed".
+   CONCLUSION: Pack of, Color (and Bangle Brand Size) are locked ID attributes. Flipkart's automated
+   image reviewer (live since ~18 Oct night) decides our photos do not match "Pack of 4", even a
+   photo that shows exactly 4 bangles, and we cannot change Pack of. So no image edit on these 111
+   listings can pass right now. Failed edits change nothing: the live listings keep their last
+   approved photos and keep selling.
+   The 18 Oct morning round (<request-id>) is the last that passed (53 rows), with lifestyle main.
+
+   WHAT CAN STILL WORK
+   1. Seller Support ticket (Help > Contact Seller Support > Listings > QC rejection): ask for a
+      manual re-review of request <request-id> - the main image shows exactly 4 bangles and the
+      listing says Pack of 4 / Items Included 4 Bangles. Draft text: flipkart-support-ticket.txt.
+   2. For colours Flipkart says are wrong (Color is locked): create NEW listings with the right Color
+      in a new Group ID, then deactivate the old ones. Choose Pack of / Type at creation knowing they
+      are permanent; ask Seller Support which Pack of value the reviewer expects for a set of 4.
+
+UPDATE 19 Oct ~08:57 - SELLER SUPPORT TICKET RAISED
+   Ticket <ticket-id> (status: Open). Flipkart says an agent responds within 24 hours, by email
+   to <seller-email> and on the callback number on the account.
+   Asked for: manual re-review of <request-id>, and the correct "Pack of" value for one set of 4 bangles.
+   Ticket form note: the optional "Request ID" field rejects BLK... ids (Proceed stays disabled) - put the
+   id in the description instead. Script: My Bangle Bliss/fk_raise_ticket.py
+   Track it: Seller Hub > Help > My Help Center > My Tickets.

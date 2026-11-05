@@ -1,0 +1,515 @@
+{
+ "category": "glass-kundan-bangles",
+ "marketplace": "amazon.in",
+ "source": "Seller Central > Brand Analytics > Top Search Terms (weekly)",
+ "week": "2026-W41 (2026-10-04 to 2026-10-10)",
+ "pulled": "2026-10-16",
+ "rank_meaning": "Search Frequency Rank, 1 = most searched, lower is better. Amazon does not publish absolute counts.",
+ "terms": {
+  "bangles set for women": 875,
+  "bangles": 2787,
+  "glass bangles set for women": 6586,
+  "glass bangles": 15662,
+  "bangles set": 17977,
+  "bangles for women": 19941,
+  "chudi set for women": 20851,
+  "navratri bangles for women": 24097,
+  "glass bangles for women": 26359,
+  "chudi": 36346,
+  "kundan bangles": 38728,
+  "red bangles set for women": 40340,
+  "stone bangles for women": 44207,
+  "pink bangles": 44505,
+  "green bangles for women": 47784,
+  "red bangles": 49776,
+  "churi": 60603,
+  "churi set for women": 80482,
+  "purple bangles": 88799,
+  "pink bangles set for women": 95207,
+  "stone studded bangles set": 96936,
+  "green bangles": 98118,
+  "blue bangles": 100095,
+  "maroon bangles for women": 110432,
+  "red glass bangles": 116755,
+  "bridal bangles set for wedding": 116755,
+  "purple bangles for women": 143277,
+  "orange bangles": 149420,
+  "hand painted glass bangles": 161474,
+  "yellow bangles": 162572,
+  "bangles set for women wedding": 167074,
+  "blue bangles set for women": 168181,
+  "glass bangles colourful": 169362,
+  "bridal bangles": 179573,
+  "white stone bangles for women": 180980,
+  "karwa chauth bangles set": 186632,
+  "crystal bangles for women": 194181,
+  "pink glass bangles": 195801,
+  "traditional glass bangles for women": 200753,
+  "green glass bangles for women": 209702,
+  "multicolor bangles for women": 223666,
+  "golden glass bangles": 223666,
+  "kundan bangle": 228094,
+  "maroon glass bangles for women": 237227,
+  "kundan bangles set for women": 239539,
+  "ladies bangles for women": 260506,
+  "stone set kundan bangles": 260506,
+  "transparent bangles": 321723,
+  "yellow bangles for women": 367659,
+  "wedding bangles": 473318,
+  "bangles set for women party wear": 611881,
+  "bangles for women stylish": 4743,
+  "chudiyan set for women glass": 82808,
+  "daily wear bangles for women": 120702,
+  "bangles for girls": 149420,
+  "fancy bangles for women stylish": 149420,
+  "chudiyan": 180980,
+  "fancy bangles": 223666,
+  "trendy bangles": 279314,
+  "designer bangles for women": 297121,
+  "kaanch ki chudiyan": 304839,
+  "bangles combo": 361941,
+  "latest bangles for women stylish": 379672,
+  "glass bangles combo": 454701
+ },
+ "searched_but_not_our_product": {
+  "kangan for women": 33125,
+  "kangan": 63245,
+  "kashmiri bangles": 16188,
+  "raindrop glass bangles": 29306,
+  "oxidised bangles for women": 4421,
+  "lac bangles": 14019,
+  "jelly bangles": 16499,
+  "daily wear bangles (gold)": 335795
+ },
+ "priority_words": [
+  {
+   "word": "bangles",
+   "best_rank": 875,
+   "from": "bangles set for women"
+  },
+  {
+   "word": "stylish",
+   "best_rank": 4743,
+   "from": "bangles for women stylish"
+  },
+  {
+   "word": "glass",
+   "best_rank": 6586,
+   "from": "glass bangles set for women"
+  },
+  {
+   "word": "chudi",
+   "best_rank": 20851,
+   "from": "chudi set for women"
+  },
+  {
+   "word": "navratri",
+   "best_rank": 24097,
+   "from": "navratri bangles for women"
+  },
+  {
+   "word": "kundan",
+   "best_rank": 38728,
+   "from": "kundan bangles"
+  },
+  {
+   "word": "red",
+   "best_rank": 40340,
+   "from": "red bangles set for women"
+  },
+  {
+   "word": "stone",
+   "best_rank": 44207,
+   "from": "stone bangles for women"
+  },
+  {
+   "word": "pink",
+   "best_rank": 44505,
+   "from": "pink bangles"
+  },
+  {
+   "word": "green",
+   "best_rank": 47784,
+   "from": "green bangles for women"
+  },
+  {
+   "word": "churi",
+   "best_rank": 60603,
+   "from": "churi"
+  },
+  {
+   "word": "chudiyan",
+   "best_rank": 82808,
+   "from": "chudiyan set for women glass"
+  },
+  {
+   "word": "purple",
+   "best_rank": 88799,
+   "from": "purple bangles"
+  },
+  {
+   "word": "studded",
+   "best_rank": 96936,
+   "from": "stone studded bangles set"
+  },
+  {
+   "word": "blue",
+   "best_rank": 100095,
+   "from": "blue bangles"
+  },
+  {
+   "word": "maroon",
+   "best_rank": 110432,
+   "from": "maroon bangles for women"
+  },
+  {
+   "word": "bridal",
+   "best_rank": 116755,
+   "from": "bridal bangles set for wedding"
+  },
+  {
+   "word": "wedding",
+   "best_rank": 116755,
+   "from": "bridal bangles set for wedding"
+  },
+  {
+   "word": "wear",
+   "best_rank": 120702,
+   "from": "daily wear bangles for women"
+  },
+  {
+   "word": "daily",
+   "best_rank": 120702,
+   "from": "daily wear bangles for women"
+  },
+  {
+   "word": "orange",
+   "best_rank": 149420,
+   "from": "orange bangles"
+  },
+  {
+   "word": "girls",
+   "best_rank": 149420,
+   "from": "bangles for girls"
+  },
+  {
+   "word": "fancy",
+   "best_rank": 149420,
+   "from": "fancy bangles for women stylish"
+  },
+  {
+   "word": "hand",
+   "best_rank": 161474,
+   "from": "hand painted glass bangles"
+  },
+  {
+   "word": "painted",
+   "best_rank": 161474,
+   "from": "hand painted glass bangles"
+  },
+  {
+   "word": "yellow",
+   "best_rank": 162572,
+   "from": "yellow bangles"
+  },
+  {
+   "word": "colourful",
+   "best_rank": 169362,
+   "from": "glass bangles colourful"
+  },
+  {
+   "word": "white",
+   "best_rank": 180980,
+   "from": "white stone bangles for women"
+  },
+  {
+   "word": "karwa",
+   "best_rank": 186632,
+   "from": "karwa chauth bangles set"
+  },
+  {
+   "word": "chauth",
+   "best_rank": 186632,
+   "from": "karwa chauth bangles set"
+  },
+  {
+   "word": "crystal",
+   "best_rank": 194181,
+   "from": "crystal bangles for women"
+  },
+  {
+   "word": "traditional",
+   "best_rank": 200753,
+   "from": "traditional glass bangles for women"
+  },
+  {
+   "word": "multicolor",
+   "best_rank": 223666,
+   "from": "multicolor bangles for women"
+  },
+  {
+   "word": "golden",
+   "best_rank": 223666,
+   "from": "golden glass bangles"
+  },
+  {
+   "word": "bangle",
+   "best_rank": 228094,
+   "from": "kundan bangle"
+  },
+  {
+   "word": "ladies",
+   "best_rank": 260506,
+   "from": "ladies bangles for women"
+  },
+  {
+   "word": "trendy",
+   "best_rank": 279314,
+   "from": "trendy bangles"
+  },
+  {
+   "word": "designer",
+   "best_rank": 297121,
+   "from": "designer bangles for women"
+  },
+  {
+   "word": "kaanch",
+   "best_rank": 304839,
+   "from": "kaanch ki chudiyan"
+  },
+  {
+   "word": "transparent",
+   "best_rank": 321723,
+   "from": "transparent bangles"
+  },
+  {
+   "word": "combo",
+   "best_rank": 361941,
+   "from": "bangles combo"
+  },
+  {
+   "word": "latest",
+   "best_rank": 379672,
+   "from": "latest bangles for women stylish"
+  },
+  {
+   "word": "party",
+   "best_rank": 611881,
+   "from": "bangles set for women party wear"
+  }
+ ],
+ "extra_words_not_ranked": [
+  "festival",
+  "festive",
+  "diwali",
+  "teej",
+  "haldi",
+  "mehendi",
+  "sangeet",
+  "bridesmaid",
+  "gift",
+  "anniversary",
+  "jewellery",
+  "return",
+  "stackable",
+  "sparkling",
+  "lightweight",
+  "ethnic",
+  "indian",
+  "handmade",
+  "pair",
+  "bracelet",
+  "bracelets"
+ ],
+ "product_words": {
+  "GVK2": [
+   "hand",
+   "painted",
+   "golden",
+   "leaf"
+  ],
+  "KSG2": [
+   "single",
+   "stone"
+  ],
+  "KMS2": [
+   "multi",
+   "teardrop",
+   "multicolor"
+  ]
+ },
+ "colour_words": {
+  "Lime Green": [
+   "parrot"
+  ],
+  "Lavender": [
+   "purple",
+   "violet",
+   "lilac"
+  ],
+  "Sea Green": [
+   "green",
+   "teal",
+   "aqua"
+  ],
+  "Forest Green": [
+   "green",
+   "dark"
+  ],
+  "Deep Purple": [
+   "purple",
+   "violet"
+  ],
+  "Clear": [
+   "transparent",
+   "crystal",
+   "white"
+  ],
+  "Multicolour": [
+   "multicolor",
+   "colourful",
+   "rainbow"
+  ],
+  "Amber": [
+   "orange",
+   "yellow",
+   "golden",
+   "brown"
+  ],
+  "Emerald Green": [
+   "green"
+  ],
+  "Cherry Red": [
+   "red",
+   "maroon"
+  ],
+  "Moss Green": [
+   "green",
+   "olive"
+  ],
+  "Ivory": [
+   "white",
+   "cream"
+  ],
+  "Lemon Yellow": [
+   "yellow",
+   "golden"
+  ],
+  "Royal Blue": [
+   "blue",
+   "navy"
+  ],
+  "Sky Aqua": [
+   "blue",
+   "aqua",
+   "turquoise"
+  ],
+  "Parrot Green": [
+   "green",
+   "lime"
+  ],
+  "Coral Peach": [
+   "orange",
+   "pink"
+  ],
+  "Orchid Pink": [
+   "pink"
+  ],
+  "Mint Green": [
+   "green",
+   "pista"
+  ],
+  "Magenta": [
+   "pink",
+   "rani"
+  ],
+  "Ruby Red": [
+   "red",
+   "maroon"
+  ],
+  "Plum Wine": [
+   "purple",
+   "wine"
+  ],
+  "Maroon": [
+   "red"
+  ],
+  "Rust Orange": [
+   "orange",
+   "brown"
+  ],
+  "Lime Green ": [
+   "green"
+  ],
+  "Ivory White": [
+   "white",
+   "cream"
+  ],
+  "Turquoise": [
+   "blue",
+   "aqua"
+  ],
+  "Hot Pink": [
+   "pink",
+   "rani"
+  ],
+  "Mustard Yellow": [
+   "yellow",
+   "golden"
+  ],
+  "Lavender Purple": [
+   "purple",
+   "violet",
+   "lilac"
+  ],
+  "Bottle Green": [
+   "green",
+   "dark"
+  ],
+  "Royal Purple": [
+   "purple",
+   "violet"
+  ],
+  "Wine Maroon": [
+   "red",
+   "maroon"
+  ],
+  "Dusty Pink": [
+   "pink",
+   "rose"
+  ],
+  "Apple Green": [
+   "green"
+  ]
+ },
+ "general_excluded_words": [
+  "red",
+  "pink",
+  "green",
+  "purple",
+  "blue",
+  "maroon",
+  "orange",
+  "yellow",
+  "white",
+  "golden",
+  "multicolor",
+  "colourful",
+  "crystal",
+  "transparent",
+  "hand",
+  "painted",
+  "bangle"
+ ],
+ "product_only_words": {
+  "hand": [
+   "GVK2"
+  ],
+  "painted": [
+   "GVK2"
+  ],
+  "golden": [
+   "GVK2"
+  ]
+ }
+}

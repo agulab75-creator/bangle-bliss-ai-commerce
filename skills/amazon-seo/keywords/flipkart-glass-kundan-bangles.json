@@ -1,0 +1,211 @@
+{
+ "category": "glass-kundan-bangles",
+ "marketplace": "flipkart.com",
+ "source": "flipkart.com search autosuggest (live, from Chrome); order within a list = demand order; Seller Hub shows no search data",
+ "pulled": "2026-10-16",
+ "rank_meaning": "No numeric volume exists on Flipkart. A phrase that appears at position 1-3 of its seed's suggestions, or under many seeds, is high demand.",
+ "field_rules": {
+  "Search Keywords": "MAX 5 phrases, '::' separated, full phrases a shopper types (template example: 'Red Casual Tshirt for Women')",
+  "Product Title": "free text",
+  "Key Features": "multi-text '::'",
+  "avoid": [
+   "churi (on Flipkart it means churidar clothing)",
+   "kangan/kada if not true"
+  ]
+ },
+ "suggestions": {
+  "bangles": [
+   "bangles for women",
+   "bangles combo set",
+   "bangles for girls",
+   "bangle set",
+   "bangles gold plated",
+   "bangle box"
+  ],
+  "glass bangles": [
+   "glass bangles for women",
+   "glass bangles combo set",
+   "glass bangles set",
+   "glass bangles kashmiri",
+   "glass bangles red colour",
+   "glass bangles for wedding",
+   "glass bangles 2.4 size"
+  ],
+  "bangles set": [
+   "bangles set for women",
+   "bangle set",
+   "bangles set with box",
+   "bangles set for wedding",
+   "bangles combo set",
+   "bangles set for girls",
+   "bangles set for bride"
+  ],
+  "bangles for women": [
+   "bangles for women traditional",
+   "bangles for women set",
+   "bangles for women karwa chauth",
+   "bangles for women chuda",
+   "bangles for women glass",
+   "bangles for women navratri"
+  ],
+  "kundan bangles": [
+   "kundan bangles for women",
+   "kundan bangles set",
+   "kundan bangles with latkan",
+   "kundan stone bangles"
+  ],
+  "stone bangles": [
+   "stone bangles for women",
+   "stone bangles set",
+   "stone bangles gold",
+   "stone bangles combo",
+   "stone bangles glass",
+   "white stone bangles"
+  ],
+  "chudi": [
+   "chudi bangle",
+   "chudi set",
+   "chuda set bridal"
+  ],
+  "bangles set of 4": [
+   "bangles for women set of 4",
+   "stone bangles set of 4",
+   "glass bangles set of 4",
+   "golden bangles set of 4"
+  ],
+  "green bangles": [
+   "green bangles for women",
+   "green bangles set",
+   "green bangles for girls"
+  ],
+  "red bangles": [
+   "red bangles for women",
+   "red bangles set",
+   "red bangles for wedding",
+   "red bangles glass",
+   "red bangles for bride"
+  ],
+  "pink bangles": [
+   "pink bangles set",
+   "pink bangles for women",
+   "pink bangles glass",
+   "rani pink bangles set"
+  ],
+  "blue bangles": [
+   "blue bangles set",
+   "blue bangles for women"
+  ],
+  "yellow bangles": [
+   "yellow bangles for women",
+   "yellow bangles set",
+   "yellow bangles for haldi",
+   "yellow bangles glass"
+  ],
+  "orange bangles": [
+   "orange bangles set",
+   "orange bangles for women",
+   "orange glass bangles",
+   "rust orange bangles"
+  ],
+  "white bangles": [
+   "white bangles set",
+   "white bangles for women",
+   "white stone bangles"
+  ],
+  "maroon bangles": [
+   "maroon bangles for women",
+   "maroon bangles set",
+   "maroon glass bangles"
+  ],
+  "multicolor bangles": [
+   "multicolor bangles set"
+  ],
+  "bridal bangles": [
+   "bridal bangles set",
+   "bridal bangles for women",
+   "bridal bangles for wedding"
+  ],
+  "wedding bangles": [
+   "wedding bangles set",
+   "wedding bangles for women",
+   "wedding bangles for bride",
+   "bangles for wedding party",
+   "fancy bangles for wedding"
+  ],
+  "karwa chauth bangles": [
+   "karwa chauth bangles",
+   "karwa chauth bangles set",
+   "karwa chauth special bangles",
+   "karwa chauth fancy bangles"
+  ],
+  "stylish bangles": [
+   "stylish bangles for women",
+   "stylish glass bangles",
+   "stylish bangles set"
+  ],
+  "fancy bangles": [
+   "fancy bangles for women",
+   "fancy bangles set",
+   "fancy bangles for wedding"
+  ],
+  "trendy bangles": [
+   "trendy bangles for women",
+   "trendy glass bangles"
+  ],
+  "daily wear bangles": [
+   "daily wear bangle for women",
+   "daily wear bangles glass"
+  ],
+  "kundan glass bangles": [
+   "kundan glass bangle set"
+  ],
+  "bangles combo": [
+   "bangles combo set",
+   "bangles combo for women",
+   "glass bangles combo set"
+  ],
+  "crystal bangles": [
+   "crystal bangles for women",
+   "glass crystal bangles"
+  ],
+  "transparent bangles": [
+   "transparent bangles for women",
+   "transparent glass bangles"
+  ],
+  "hand painted bangles": [
+   "hand painted bangles set",
+   "hand painted bangles gold"
+  ],
+  "studded bangles": [
+   "stone studded bangles",
+   "stone studded bangle sets"
+  ]
+ },
+ "search_keywords_generic_ranked": [
+  "glass bangles for women",
+  "bangles set for women",
+  "kundan bangles for women",
+  "stone bangles for women",
+  "glass bangles combo set",
+  "bridal bangles set",
+  "bangles for women karwa chauth",
+  "wedding bangles set",
+  "stylish bangles for women",
+  "fancy bangles for women"
+ ],
+ "search_keywords_colour_phrase": {
+  "green": "green bangles for women",
+  "red": "red bangles for women",
+  "pink": "pink bangles set",
+  "blue": "blue bangles set",
+  "purple": "purple bangles for women",
+  "yellow": "yellow bangles for women",
+  "orange": "orange bangles set",
+  "white": "white bangles set",
+  "maroon": "maroon bangles for women",
+  "multicolor": "multicolor bangles set",
+  "transparent": "transparent bangles for women",
+  "crystal": "crystal bangles for women"
+ },
+ "search_keywords_rule": "5 phrases: 1 colour phrase + the 4 highest-ranked generic phrases that stay true for the product"
+}

@@ -1,0 +1,11 @@
+.env*
+*.key
+*api key*
+.*-profile*/
+.magic-profile*/
+__pycache__/
+*.pyc
+*.xlsm
+*.xls
+jobs/
+raw*/
